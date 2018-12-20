@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DatePickerView.h
 //  DatePicker
 //
 //  Created by Xcode Developer on 12/19/18.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface DatePickerView : UIView
 
 @end
 
+NS_ASSUME_NONNULL_END
