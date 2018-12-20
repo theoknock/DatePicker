@@ -25,8 +25,8 @@
         CGFloat topInset             = CGRectGetMidY(frame);
         CGFloat bottomInset          = CGRectGetMidY(frame);
         self.sectionInset            = UIEdgeInsetsMake(topInset, 0.0, bottomInset, 0.0);
-        self.minimumLineSpacing      = 10.0;
-        self.minimumInteritemSpacing = 10.0;
+        self.minimumLineSpacing      = 0.0;
+        self.minimumInteritemSpacing = 0.0;
     }
     
     return [self init];
@@ -50,9 +50,9 @@
     
     // First, calculate the proposed center of the collection view once the collection view has stopped
     CGFloat offsetAdjustment = MAXFLOAT;
-    CGFloat verticalCenter = proposedContentOffset.y + (CGRectGetHeight(self.collectionView.bounds) / 2.0);
+    CGFloat verticalCenter = proposedContentOffset.y + (CGRectGetHeight(self.collectionView.superview.bounds) / 2.0);
     // Use the center to find the proposed visible rect.
-    CGRect proposedRect = CGRectMake(0.0, proposedContentOffset.y, self.collectionView.bounds.size.width, self.collectionView.bounds.size.height);
+    CGRect proposedRect = CGRectMake(proposedContentOffset.x, proposedContentOffset.y, self.collectionView.superview.bounds.size.width, self.collectionView.superview.bounds.size.height);
     
     // Get the attributes for the cells in that rect.
     NSArray<UICollectionViewLayoutAttributes *> *array = (NSArray<UICollectionViewLayoutAttributes *> *)[super layoutAttributesForElementsInRect:proposedRect];

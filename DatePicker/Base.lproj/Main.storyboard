@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-jq-r58" customClass="DatePickerView">
-                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j6N-CI-PcY" userLabel="Month Collection View" customClass="DatePickerCollectionView">
                                         <rect key="frame" x="0.0" y="0.0" width="69" height="896"/>
@@ -71,8 +71,14 @@
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </collectionViewCell>
                                         </cells>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="IBcontentOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dataSource" destination="bfu-GR-amI" id="SrA-xJ-QPd"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ONY-LA-CFv"/>
                                         </connections>
                                     </collectionView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nQs-d7-mXu" userLabel="Year Collection View" customClass="DatePickerCollectionView">
@@ -97,6 +103,7 @@
                                         </cells>
                                         <connections>
                                             <outlet property="dataSource" destination="bfu-GR-amI" id="Gqe-mT-BRL"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="98O-ZM-s4Y"/>
                                         </connections>
                                     </collectionView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6nJ-i7-833" userLabel="Hour Collection View" customClass="DatePickerCollectionView">
@@ -121,6 +128,7 @@
                                         </cells>
                                         <connections>
                                             <outlet property="dataSource" destination="bfu-GR-amI" id="VB6-z8-Qco"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="VS4-uQ-ege"/>
                                         </connections>
                                     </collectionView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="4" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eyb-An-35z" userLabel="Minute Collection View" customClass="DatePickerCollectionView">
@@ -145,6 +153,7 @@
                                         </cells>
                                         <connections>
                                             <outlet property="dataSource" destination="bfu-GR-amI" id="Kqg-Rg-jri"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="1j6-6W-0xQ"/>
                                         </connections>
                                     </collectionView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="5" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KM7-7m-uPy" userLabel="Second Collection View" customClass="DatePickerCollectionView">
@@ -169,6 +178,7 @@
                                         </cells>
                                         <connections>
                                             <outlet property="dataSource" destination="bfu-GR-amI" id="6tt-2P-eZX"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="0Sg-Yd-6hK"/>
                                         </connections>
                                     </collectionView>
                                 </subviews>
@@ -204,7 +214,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8Ki-jq-r58" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="4VW-AD-489"/>
-                            <constraint firstItem="8Ki-jq-r58" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="5" id="EHQ-aB-rkQ"/>
+                            <constraint firstItem="8Ki-jq-r58" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EHQ-aB-rkQ"/>
                             <constraint firstItem="8Ki-jq-r58" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Erf-ph-OLY"/>
                             <constraint firstItem="8Ki-jq-r58" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="WkX-Gm-bko"/>
                         </constraints>

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class DatePickerCollectionView, DatePickerCollectionViewData;
 
-@interface DatePickerViewController : UIViewController
+@interface DatePickerViewController : UIViewController <UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet DatePickerCollectionView *monthCollectionView;
 @property (weak, nonatomic) IBOutlet DatePickerCollectionView *dayCollectionView;
