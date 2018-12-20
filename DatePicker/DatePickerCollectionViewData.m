@@ -39,7 +39,7 @@ static NSString * const reuseIdentifier = @"DatePickerCollectionViewCell";
     switch ((DatePickerCollectionViewType)collectionView.tag) {
         case DatePickerCollectionViewTypeMonth:
         {
-            
+            [cell setString:[months objectAtIndex:indexPath.item]];
             break;
         }
         case DatePickerCollectionViewTypeDay:

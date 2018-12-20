@@ -18,7 +18,6 @@
 		B9206C9C21CAF98200B567CC /* DatePickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9206C9B21CAF98200B567CC /* DatePickerCollectionViewCell.m */; };
 		B9206CA021CAF9E200B567CC /* DatePickerCollectionViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = B9206C9F21CAF9E200B567CC /* DatePickerCollectionViewData.m */; };
 		B94ABA0E21CB1A7400C621DE /* DatePickerCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B94ABA0D21CB1A7400C621DE /* DatePickerCollectionViewFlowLayout.m */; };
-		B94ABA1121CB213B00C621DE /* DatePickerCollectionViewLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = B94ABA1021CB213B00C621DE /* DatePickerCollectionViewLayoutAttributes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +41,6 @@
 		B9206C9F21CAF9E200B567CC /* DatePickerCollectionViewData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickerCollectionViewData.m; sourceTree = "<group>"; wrapsLines = 0; };
 		B94ABA0C21CB1A7400C621DE /* DatePickerCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickerCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		B94ABA0D21CB1A7400C621DE /* DatePickerCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickerCollectionViewFlowLayout.m; sourceTree = "<group>"; wrapsLines = 0; };
-		B94ABA0F21CB213B00C621DE /* DatePickerCollectionViewLayoutAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickerCollectionViewLayoutAttributes.h; sourceTree = "<group>"; };
-		B94ABA1021CB213B00C621DE /* DatePickerCollectionViewLayoutAttributes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickerCollectionViewLayoutAttributes.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +78,6 @@
 				B9206C8121CABE3B00B567CC /* Main.storyboard */,
 				B94ABA0C21CB1A7400C621DE /* DatePickerCollectionViewFlowLayout.h */,
 				B94ABA0D21CB1A7400C621DE /* DatePickerCollectionViewFlowLayout.m */,
-				B94ABA0F21CB213B00C621DE /* DatePickerCollectionViewLayoutAttributes.h */,
-				B94ABA1021CB213B00C621DE /* DatePickerCollectionViewLayoutAttributes.m */,
 				B9206C9721CAF80800B567CC /* DatePickerViewController.h */,
 				B9206C9821CAF80800B567CC /* DatePickerViewController.m */,
 				B9206C9421CAF7AB00B567CC /* DatePickerView.h */,
@@ -172,7 +167,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B94ABA0E21CB1A7400C621DE /* DatePickerCollectionViewFlowLayout.m in Sources */,
-				B94ABA1121CB213B00C621DE /* DatePickerCollectionViewLayoutAttributes.m in Sources */,
 				B9206C9621CAF7AB00B567CC /* DatePickerView.m in Sources */,
 				B9206C9321CAE81600B567CC /* DatePickerCollectionView.m in Sources */,
 				B9206C8B21CABE3C00B567CC /* main.m in Sources */,
