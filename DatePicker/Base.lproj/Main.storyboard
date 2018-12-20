@@ -48,6 +48,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dataSource" destination="bfu-GR-amI" id="1Ih-si-lyx"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="7AZ-lI-4Zd"/>
                                         </connections>
                                     </collectionView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Heq-0i-HpB" userLabel="Day Collection View" customClass="DatePickerCollectionView">

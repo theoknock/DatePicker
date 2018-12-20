@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DatePickerCollectionViewData.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet DatePickerCollectionView *minuteCollectionView;
 @property (weak, nonatomic) IBOutlet DatePickerCollectionView *secondCollectionView;
 @property (strong, nonatomic) IBOutletCollection(DatePickerCollectionView) NSArray *datePickerCollectionViews;
-
 @property (strong, nonatomic) IBOutlet DatePickerCollectionViewData *datePickerCollectionViewDataSource;
 
 @end

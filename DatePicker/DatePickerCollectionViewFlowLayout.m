@@ -72,7 +72,8 @@
         }
     }
     
-    return CGPointMake(proposedContentOffset.x, proposedContentOffset.y + offsetAdjustment);
+    CGPoint point = CGPointMake(proposedContentOffset.x, proposedContentOffset.y + offsetAdjustment);
+    return point;
 }
 
 + (Class)layoutAttributesClass
@@ -85,7 +86,7 @@
     return YES;
 }
 
-//-(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
+//- (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
 //{
 //    NSArray<UICollectionViewLayoutAttributes *> *layoutAttributesArray = (NSArray<UICollectionViewLayoutAttributes *> *)[super layoutAttributesForElementsInRect:rect];
 //

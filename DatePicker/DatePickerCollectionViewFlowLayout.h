@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithCollectionViewFrame:(CGRect)frame;
 
+- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity;
+
 
 @end
 

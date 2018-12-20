@@ -39,7 +39,7 @@
 		B9206C9B21CAF98200B567CC /* DatePickerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickerCollectionViewCell.m; sourceTree = "<group>"; wrapsLines = 0; };
 		B9206C9E21CAF9E200B567CC /* DatePickerCollectionViewData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickerCollectionViewData.h; sourceTree = "<group>"; wrapsLines = 0; };
 		B9206C9F21CAF9E200B567CC /* DatePickerCollectionViewData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickerCollectionViewData.m; sourceTree = "<group>"; wrapsLines = 0; };
-		B94ABA0C21CB1A7400C621DE /* DatePickerCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickerCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		B94ABA0C21CB1A7400C621DE /* DatePickerCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickerCollectionViewFlowLayout.h; sourceTree = "<group>"; wrapsLines = 0; };
 		B94ABA0D21CB1A7400C621DE /* DatePickerCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickerCollectionViewFlowLayout.m; sourceTree = "<group>"; wrapsLines = 0; };
 /* End PBXFileReference section */
 

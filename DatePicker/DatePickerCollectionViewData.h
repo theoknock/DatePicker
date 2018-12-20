@@ -22,7 +22,8 @@ typedef NS_ENUM(NSUInteger, DatePickerCollectionViewType) {
 
 @interface DatePickerCollectionViewData : NSObject <UICollectionViewDataSource>
 
-@property(nonatomic, readonly, copy) NSString *reuseIdentifier;
+@property (nonatomic, readonly, copy) NSString *reuseIdentifier;
+@property (nonatomic, assign, setter=setDays:) NSUInteger days;
 
 @end
 

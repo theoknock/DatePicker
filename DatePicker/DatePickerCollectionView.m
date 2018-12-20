@@ -14,7 +14,6 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
     self.collectionViewLayout = [[DatePickerCollectionViewFlowLayout alloc] initWithCollectionViewFrame:self.superview.frame];
 }
 
