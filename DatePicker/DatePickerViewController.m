@@ -99,9 +99,17 @@
 
 - (NSIndexPath *)indexPathForItemAtCenterOfCollectionView:(DatePickerCollectionView *)collectionView contentOffset:(CGPoint)contentOffset
 {
-    CGPoint centerPoint = CGPointMake(collectionView.center.x + contentOffset.x,
+   CGPoint centerPoint = CGPointMake(collectionView.center.x + contentOffset.x,
                                       collectionView.center.y + contentOffset.y);
+    CGRect centerRect = CGRectMake(collectionView.center.x - 25.0, collectionView.center.y - 25.0, 50.0, 50.0);
     NSIndexPath *indexPath = [collectionView indexPathForItemAtPoint:centerPoint];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CATextLayer *layer = [CATextLayer new];
+        [layer setFrame:CGRectOffset(centerRect, contentOffset.x, contentOffset.y)];
+        [layer setBackgroundColor:[UIColor redColor].CGColor];
+        [layer setString:[NSString stringWithFormat:@"%lu", indexPath.item]];
+        [collectionView.layer addSublayer:layer];
+    });
     
     return indexPath;
 }

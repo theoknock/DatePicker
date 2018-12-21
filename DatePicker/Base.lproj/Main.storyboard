@@ -21,193 +21,265 @@
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-jq-r58" customClass="DatePickerView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j6N-CI-PcY" userLabel="Month Collection View" customClass="DatePickerCollectionView">
+                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIz-jz-CPn" userLabel="Month View">
                                         <rect key="frame" x="0.0" y="0.0" width="69" height="896"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j6N-CI-PcY" userLabel="Month Collection View" customClass="DatePickerCollectionView">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="896"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PX5-Pc-JMR" customClass="DatePickerCollectionViewFlowLayout">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePickerCollectionViewCell" id="ojc-GD-0OB" customClass="DatePickerCollectionViewCell">
+                                                        <rect key="frame" x="9.6666666666666661" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </view>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="IBcontentOffset">
+                                                        <size key="value" width="0.0" height="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="bfu-GR-amI" id="1Ih-si-lyx"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7AZ-lI-4Zd"/>
+                                                </connections>
+                                            </collectionView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PX5-Pc-JMR" customClass="DatePickerCollectionViewFlowLayout">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePickerCollectionViewCell" id="ojc-GD-0OB" customClass="DatePickerCollectionViewCell">
-                                                <rect key="frame" x="9.6666666666666661" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </view>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="IBcontentOffset">
-                                                <size key="value" width="0.0" height="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <outlet property="dataSource" destination="bfu-GR-amI" id="1Ih-si-lyx"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="7AZ-lI-4Zd"/>
-                                        </connections>
-                                    </collectionView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Heq-0i-HpB" userLabel="Day Collection View" customClass="DatePickerCollectionView">
+                                        <constraints>
+                                            <constraint firstItem="j6N-CI-PcY" firstAttribute="centerY" secondItem="NIz-jz-CPn" secondAttribute="centerY" id="AnJ-j9-eFS"/>
+                                            <constraint firstItem="j6N-CI-PcY" firstAttribute="width" secondItem="NIz-jz-CPn" secondAttribute="width" id="GR3-MJ-jum"/>
+                                            <constraint firstItem="j6N-CI-PcY" firstAttribute="height" secondItem="NIz-jz-CPn" secondAttribute="height" id="df3-LW-duS"/>
+                                            <constraint firstItem="j6N-CI-PcY" firstAttribute="centerX" secondItem="NIz-jz-CPn" secondAttribute="centerX" id="klV-GG-pIx"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6Y-4a-Scc" userLabel="Day View">
                                         <rect key="frame" x="69" y="0.0" width="69" height="896"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Heq-0i-HpB" userLabel="Day Collection View" customClass="DatePickerCollectionView">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="896"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yky-Xr-QcM" customClass="DatePickerCollectionViewFlowLayout">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePickerCollectionViewCell" id="6Pr-Uv-X4c" customClass="DatePickerCollectionViewCell">
+                                                        <rect key="frame" x="9.6666666666666661" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </view>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="IBcontentOffset">
+                                                        <size key="value" width="0.0" height="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="bfu-GR-amI" id="SrA-xJ-QPd"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ONY-LA-CFv"/>
+                                                </connections>
+                                            </collectionView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yky-Xr-QcM" customClass="DatePickerCollectionViewFlowLayout">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePickerCollectionViewCell" id="6Pr-Uv-X4c" customClass="DatePickerCollectionViewCell">
-                                                <rect key="frame" x="9.6666666666666661" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </view>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="IBcontentOffset">
-                                                <size key="value" width="0.0" height="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <outlet property="dataSource" destination="bfu-GR-amI" id="SrA-xJ-QPd"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ONY-LA-CFv"/>
-                                        </connections>
-                                    </collectionView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nQs-d7-mXu" userLabel="Year Collection View" customClass="DatePickerCollectionView">
+                                        <constraints>
+                                            <constraint firstItem="Heq-0i-HpB" firstAttribute="width" secondItem="V6Y-4a-Scc" secondAttribute="width" id="J4M-hF-iq9"/>
+                                            <constraint firstItem="Heq-0i-HpB" firstAttribute="height" secondItem="V6Y-4a-Scc" secondAttribute="height" id="ODs-un-WVb"/>
+                                            <constraint firstItem="Heq-0i-HpB" firstAttribute="centerX" secondItem="V6Y-4a-Scc" secondAttribute="centerX" id="cyO-ee-TU1"/>
+                                            <constraint firstItem="Heq-0i-HpB" firstAttribute="centerY" secondItem="V6Y-4a-Scc" secondAttribute="centerY" id="xQs-OQ-VJu"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIG-yy-YoW" userLabel="Year View">
                                         <rect key="frame" x="138" y="0.0" width="69" height="896"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nQs-d7-mXu" userLabel="Year Collection View" customClass="DatePickerCollectionView">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="896"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ByK-Av-zXd" customClass="DatePickerCollectionViewFlowLayout">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePickerCollectionViewCell" id="jxS-BG-Hks" customClass="DatePickerCollectionViewCell">
+                                                        <rect key="frame" x="9.6666666666666661" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </view>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="bfu-GR-amI" id="Gqe-mT-BRL"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="98O-ZM-s4Y"/>
+                                                </connections>
+                                            </collectionView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ByK-Av-zXd" customClass="DatePickerCollectionViewFlowLayout">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePickerCollectionViewCell" id="jxS-BG-Hks" customClass="DatePickerCollectionViewCell">
-                                                <rect key="frame" x="9.6666666666666661" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </view>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="bfu-GR-amI" id="Gqe-mT-BRL"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="98O-ZM-s4Y"/>
-                                        </connections>
-                                    </collectionView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6nJ-i7-833" userLabel="Hour Collection View" customClass="DatePickerCollectionView">
+                                        <constraints>
+                                            <constraint firstItem="nQs-d7-mXu" firstAttribute="centerY" secondItem="UIG-yy-YoW" secondAttribute="centerY" id="BBm-Yg-bFd"/>
+                                            <constraint firstItem="nQs-d7-mXu" firstAttribute="width" secondItem="UIG-yy-YoW" secondAttribute="width" id="FNW-Tu-6ym"/>
+                                            <constraint firstItem="nQs-d7-mXu" firstAttribute="centerX" secondItem="UIG-yy-YoW" secondAttribute="centerX" id="a8a-ms-iQ6"/>
+                                            <constraint firstItem="nQs-d7-mXu" firstAttribute="height" secondItem="UIG-yy-YoW" secondAttribute="height" id="rY9-yu-aOm"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dva-6e-Zcs" userLabel="Hour View">
                                         <rect key="frame" x="207" y="0.0" width="69" height="896"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6nJ-i7-833" userLabel="Hour Collection View" customClass="DatePickerCollectionView">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="896"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RnT-7s-kah" customClass="DatePickerCollectionViewFlowLayout">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePickerCollectionViewCell" id="Voz-4h-Uuk" customClass="DatePickerCollectionViewCell">
+                                                        <rect key="frame" x="9.6666666666666661" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </view>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="bfu-GR-amI" id="VB6-z8-Qco"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VS4-uQ-ege"/>
+                                                </connections>
+                                            </collectionView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RnT-7s-kah" customClass="DatePickerCollectionViewFlowLayout">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePickerCollectionViewCell" id="Voz-4h-Uuk" customClass="DatePickerCollectionViewCell">
-                                                <rect key="frame" x="9.6666666666666661" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </view>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="bfu-GR-amI" id="VB6-z8-Qco"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="VS4-uQ-ege"/>
-                                        </connections>
-                                    </collectionView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="4" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eyb-An-35z" userLabel="Minute Collection View" customClass="DatePickerCollectionView">
+                                        <constraints>
+                                            <constraint firstItem="6nJ-i7-833" firstAttribute="height" secondItem="dva-6e-Zcs" secondAttribute="height" id="Kff-sj-qVB"/>
+                                            <constraint firstItem="6nJ-i7-833" firstAttribute="centerX" secondItem="dva-6e-Zcs" secondAttribute="centerX" id="SNf-uU-jEt"/>
+                                            <constraint firstItem="6nJ-i7-833" firstAttribute="width" secondItem="dva-6e-Zcs" secondAttribute="width" id="d3b-nw-Cce"/>
+                                            <constraint firstItem="6nJ-i7-833" firstAttribute="centerY" secondItem="dva-6e-Zcs" secondAttribute="centerY" id="ewj-hB-yl2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jm0-A8-lJM" userLabel="Minute View">
                                         <rect key="frame" x="276" y="0.0" width="69" height="896"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="4" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eyb-An-35z" userLabel="Minute Collection View" customClass="DatePickerCollectionView">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="896"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dj2-1m-RtE" customClass="DatePickerCollectionViewFlowLayout">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePickerCollectionViewCell" id="gWa-zH-1g0" customClass="DatePickerCollectionViewCell">
+                                                        <rect key="frame" x="9.6666666666666661" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </view>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="bfu-GR-amI" id="Kqg-Rg-jri"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1j6-6W-0xQ"/>
+                                                </connections>
+                                            </collectionView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dj2-1m-RtE" customClass="DatePickerCollectionViewFlowLayout">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePickerCollectionViewCell" id="gWa-zH-1g0" customClass="DatePickerCollectionViewCell">
-                                                <rect key="frame" x="9.6666666666666661" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </view>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="bfu-GR-amI" id="Kqg-Rg-jri"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="1j6-6W-0xQ"/>
-                                        </connections>
-                                    </collectionView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="5" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KM7-7m-uPy" userLabel="Second Collection View" customClass="DatePickerCollectionView">
+                                        <constraints>
+                                            <constraint firstItem="Eyb-An-35z" firstAttribute="width" secondItem="jm0-A8-lJM" secondAttribute="width" id="Nai-Rj-Wha"/>
+                                            <constraint firstItem="Eyb-An-35z" firstAttribute="height" secondItem="jm0-A8-lJM" secondAttribute="height" id="reZ-4n-gyc"/>
+                                            <constraint firstItem="Eyb-An-35z" firstAttribute="centerX" secondItem="jm0-A8-lJM" secondAttribute="centerX" id="tLU-hH-TbZ"/>
+                                            <constraint firstItem="Eyb-An-35z" firstAttribute="centerY" secondItem="jm0-A8-lJM" secondAttribute="centerY" id="xe2-h9-sOd"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hO8-cM-pqA" userLabel="Second View">
                                         <rect key="frame" x="345" y="0.0" width="69" height="896"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="5" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KM7-7m-uPy" userLabel="Second Collection View" customClass="DatePickerCollectionView">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="896"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jw4-Bm-N9S" customClass="DatePickerCollectionViewFlowLayout">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePickerCollectionViewCell" id="bLp-3p-NlN" customClass="DatePickerCollectionViewCell">
+                                                        <rect key="frame" x="9.6666666666666661" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </view>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="bfu-GR-amI" id="6tt-2P-eZX"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0Sg-Yd-6hK"/>
+                                                </connections>
+                                            </collectionView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jw4-Bm-N9S" customClass="DatePickerCollectionViewFlowLayout">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePickerCollectionViewCell" id="bLp-3p-NlN" customClass="DatePickerCollectionViewCell">
-                                                <rect key="frame" x="9.6666666666666661" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </view>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="bfu-GR-amI" id="6tt-2P-eZX"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="0Sg-Yd-6hK"/>
-                                        </connections>
-                                    </collectionView>
+                                        <constraints>
+                                            <constraint firstItem="KM7-7m-uPy" firstAttribute="height" secondItem="hO8-cM-pqA" secondAttribute="height" id="0Yo-gg-DhT"/>
+                                            <constraint firstItem="KM7-7m-uPy" firstAttribute="centerY" secondItem="hO8-cM-pqA" secondAttribute="centerY" id="H7R-JZ-RKu"/>
+                                            <constraint firstItem="KM7-7m-uPy" firstAttribute="width" secondItem="hO8-cM-pqA" secondAttribute="width" id="Ia8-gs-dVl"/>
+                                            <constraint firstItem="KM7-7m-uPy" firstAttribute="centerX" secondItem="hO8-cM-pqA" secondAttribute="centerX" id="glH-AO-SoK"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Heq-0i-HpB" firstAttribute="leading" secondItem="j6N-CI-PcY" secondAttribute="trailing" id="0FD-Up-2xv"/>
-                                    <constraint firstItem="j6N-CI-PcY" firstAttribute="width" secondItem="8Ki-jq-r58" secondAttribute="width" multiplier="1/6" id="0KG-mG-y54"/>
-                                    <constraint firstItem="6nJ-i7-833" firstAttribute="width" secondItem="8Ki-jq-r58" secondAttribute="width" multiplier="1/6" id="7Ak-A2-SV5"/>
-                                    <constraint firstItem="Eyb-An-35z" firstAttribute="width" secondItem="8Ki-jq-r58" secondAttribute="width" multiplier="1/6" id="7pU-d9-4Wk"/>
-                                    <constraint firstItem="Heq-0i-HpB" firstAttribute="width" secondItem="8Ki-jq-r58" secondAttribute="width" multiplier="1/6" id="A4Y-MA-Hfu"/>
-                                    <constraint firstItem="nQs-d7-mXu" firstAttribute="width" secondItem="8Ki-jq-r58" secondAttribute="width" multiplier="1/6" id="DfC-nI-wrO"/>
-                                    <constraint firstItem="KM7-7m-uPy" firstAttribute="leading" secondItem="Eyb-An-35z" secondAttribute="trailing" id="P81-kV-6OL"/>
-                                    <constraint firstItem="nQs-d7-mXu" firstAttribute="centerY" secondItem="8Ki-jq-r58" secondAttribute="centerY" id="Qfa-Sg-W7V"/>
-                                    <constraint firstItem="KM7-7m-uPy" firstAttribute="width" secondItem="8Ki-jq-r58" secondAttribute="width" multiplier="1/6" id="RHb-zU-j2t"/>
-                                    <constraint firstItem="KM7-7m-uPy" firstAttribute="height" secondItem="8Ki-jq-r58" secondAttribute="height" id="Utv-bS-PEg"/>
-                                    <constraint firstItem="nQs-d7-mXu" firstAttribute="height" secondItem="8Ki-jq-r58" secondAttribute="height" id="VO1-1O-rUp"/>
-                                    <constraint firstItem="6nJ-i7-833" firstAttribute="height" secondItem="8Ki-jq-r58" secondAttribute="height" id="XY9-dW-7yS"/>
-                                    <constraint firstItem="Eyb-An-35z" firstAttribute="centerY" secondItem="8Ki-jq-r58" secondAttribute="centerY" id="Y4L-NF-aV0"/>
-                                    <constraint firstItem="j6N-CI-PcY" firstAttribute="centerY" secondItem="8Ki-jq-r58" secondAttribute="centerY" id="YOd-yF-hai"/>
-                                    <constraint firstItem="Eyb-An-35z" firstAttribute="height" secondItem="8Ki-jq-r58" secondAttribute="height" id="Zl7-ds-dVr"/>
-                                    <constraint firstItem="j6N-CI-PcY" firstAttribute="height" secondItem="8Ki-jq-r58" secondAttribute="height" id="a5U-Ge-NQ2"/>
-                                    <constraint firstItem="Heq-0i-HpB" firstAttribute="centerY" secondItem="8Ki-jq-r58" secondAttribute="centerY" id="apw-KA-49x"/>
-                                    <constraint firstItem="nQs-d7-mXu" firstAttribute="leading" secondItem="Heq-0i-HpB" secondAttribute="trailing" id="ez7-Sy-rG4"/>
-                                    <constraint firstItem="6nJ-i7-833" firstAttribute="leading" secondItem="nQs-d7-mXu" secondAttribute="trailing" id="fH3-S5-1y2"/>
-                                    <constraint firstItem="Heq-0i-HpB" firstAttribute="height" secondItem="8Ki-jq-r58" secondAttribute="height" id="gVq-sP-nM8"/>
-                                    <constraint firstItem="j6N-CI-PcY" firstAttribute="leading" secondItem="8Ki-jq-r58" secondAttribute="leading" id="lH3-qH-t0Q"/>
-                                    <constraint firstItem="Eyb-An-35z" firstAttribute="leading" secondItem="6nJ-i7-833" secondAttribute="trailing" id="n1G-DY-OmH"/>
-                                    <constraint firstItem="KM7-7m-uPy" firstAttribute="centerY" secondItem="8Ki-jq-r58" secondAttribute="centerY" id="qlJ-yf-cyf"/>
-                                    <constraint firstItem="6nJ-i7-833" firstAttribute="centerY" secondItem="8Ki-jq-r58" secondAttribute="centerY" id="xyX-7P-cdb"/>
+                                    <constraint firstItem="UIG-yy-YoW" firstAttribute="top" secondItem="8Ki-jq-r58" secondAttribute="top" id="7Ps-in-wQk"/>
+                                    <constraint firstItem="jm0-A8-lJM" firstAttribute="height" secondItem="8Ki-jq-r58" secondAttribute="height" id="7j4-0n-lyt"/>
+                                    <constraint firstItem="jm0-A8-lJM" firstAttribute="top" secondItem="8Ki-jq-r58" secondAttribute="top" id="BgT-9B-cYs"/>
+                                    <constraint firstItem="dva-6e-Zcs" firstAttribute="width" secondItem="8Ki-jq-r58" secondAttribute="width" multiplier="1/6" id="Bn9-BE-4ce"/>
+                                    <constraint firstItem="hO8-cM-pqA" firstAttribute="width" secondItem="8Ki-jq-r58" secondAttribute="width" multiplier="1/6" id="C5K-6h-I7n"/>
+                                    <constraint firstItem="NIz-jz-CPn" firstAttribute="top" secondItem="8Ki-jq-r58" secondAttribute="top" id="Fds-qd-zC4"/>
+                                    <constraint firstItem="UIG-yy-YoW" firstAttribute="leading" secondItem="V6Y-4a-Scc" secondAttribute="trailing" id="NlI-hP-Meb"/>
+                                    <constraint firstItem="dva-6e-Zcs" firstAttribute="height" secondItem="8Ki-jq-r58" secondAttribute="height" id="UmF-LK-wOc"/>
+                                    <constraint firstItem="NIz-jz-CPn" firstAttribute="height" secondItem="8Ki-jq-r58" secondAttribute="height" id="VJo-0b-CDz"/>
+                                    <constraint firstItem="NIz-jz-CPn" firstAttribute="width" secondItem="8Ki-jq-r58" secondAttribute="width" multiplier="1/6" id="Yeb-Ie-9Jt"/>
+                                    <constraint firstItem="hO8-cM-pqA" firstAttribute="top" secondItem="8Ki-jq-r58" secondAttribute="top" id="Yjb-9u-kh0"/>
+                                    <constraint firstItem="hO8-cM-pqA" firstAttribute="leading" secondItem="jm0-A8-lJM" secondAttribute="trailing" id="anZ-2H-Cs3"/>
+                                    <constraint firstItem="V6Y-4a-Scc" firstAttribute="height" secondItem="8Ki-jq-r58" secondAttribute="height" id="f9z-zD-SiR"/>
+                                    <constraint firstItem="dva-6e-Zcs" firstAttribute="leading" secondItem="UIG-yy-YoW" secondAttribute="trailing" id="fO8-41-27x"/>
+                                    <constraint firstItem="UIG-yy-YoW" firstAttribute="height" secondItem="8Ki-jq-r58" secondAttribute="height" id="gRB-Kn-mJI"/>
+                                    <constraint firstItem="NIz-jz-CPn" firstAttribute="leading" secondItem="8Ki-jq-r58" secondAttribute="leading" id="gi7-Yi-6w9"/>
+                                    <constraint firstItem="V6Y-4a-Scc" firstAttribute="width" secondItem="8Ki-jq-r58" secondAttribute="width" multiplier="1/6" id="ikY-eN-z8X"/>
+                                    <constraint firstItem="V6Y-4a-Scc" firstAttribute="leading" secondItem="NIz-jz-CPn" secondAttribute="trailing" id="nyc-2o-CoP"/>
+                                    <constraint firstItem="jm0-A8-lJM" firstAttribute="width" secondItem="8Ki-jq-r58" secondAttribute="width" multiplier="1/6" id="q3w-0r-xep"/>
+                                    <constraint firstItem="jm0-A8-lJM" firstAttribute="leading" secondItem="dva-6e-Zcs" secondAttribute="trailing" id="qwo-s5-ODM"/>
+                                    <constraint firstItem="UIG-yy-YoW" firstAttribute="width" secondItem="8Ki-jq-r58" secondAttribute="width" multiplier="1/6" id="tsN-uq-f6f"/>
+                                    <constraint firstItem="hO8-cM-pqA" firstAttribute="height" secondItem="8Ki-jq-r58" secondAttribute="height" id="wxu-7D-gDD"/>
+                                    <constraint firstItem="dva-6e-Zcs" firstAttribute="top" secondItem="8Ki-jq-r58" secondAttribute="top" id="xT8-52-gSd"/>
+                                    <constraint firstItem="V6Y-4a-Scc" firstAttribute="top" secondItem="8Ki-jq-r58" secondAttribute="top" id="xsv-Ci-X7h"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -228,12 +300,12 @@
                         <outlet property="monthCollectionView" destination="j6N-CI-PcY" id="FYl-3N-H74"/>
                         <outlet property="secondCollectionView" destination="KM7-7m-uPy" id="tQ5-ZM-IkD"/>
                         <outlet property="yearCollectionView" destination="nQs-d7-mXu" id="ldA-aS-O8d"/>
-                        <outletCollection property="datePickerCollectionViews" destination="KM7-7m-uPy" id="8h9-tw-xlB"/>
-                        <outletCollection property="datePickerCollectionViews" destination="Eyb-An-35z" id="gDA-fO-nA7"/>
-                        <outletCollection property="datePickerCollectionViews" destination="6nJ-i7-833" id="LtW-hi-oRM"/>
-                        <outletCollection property="datePickerCollectionViews" destination="nQs-d7-mXu" id="u2T-jM-nPl"/>
                         <outletCollection property="datePickerCollectionViews" destination="Heq-0i-HpB" id="Ebe-Uo-Vgk"/>
                         <outletCollection property="datePickerCollectionViews" destination="j6N-CI-PcY" id="5R0-Jc-ggf"/>
+                        <outletCollection property="datePickerCollectionViews" destination="nQs-d7-mXu" id="u2T-jM-nPl"/>
+                        <outletCollection property="datePickerCollectionViews" destination="6nJ-i7-833" id="LtW-hi-oRM"/>
+                        <outletCollection property="datePickerCollectionViews" destination="Eyb-An-35z" id="gDA-fO-nA7"/>
+                        <outletCollection property="datePickerCollectionViews" destination="KM7-7m-uPy" id="8h9-tw-xlB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
